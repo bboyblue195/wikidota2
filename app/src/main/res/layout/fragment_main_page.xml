@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pg2"
+    tools:context="com.example.bboyb.demogd2.MainPageFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                app:srcCompat="@drawable/logogame"
+                android:id="@+id/imageView2" />
+
+            <TextView
+                android:text="   Dota 2 là một trò chơi hành động chiến thuật thời gian thực (ARTS) được Valve Corporation phát triển, dựa theo một mod game nổi tiếng, Defense of the Ancients, từ trò chơi Warcraft III: Reign of Chaos và bản mở rộng của nó The Frozen Throne. Được công bố lần đầu vào ngày 23 tháng 10 năm 2010 qua Game Informer, trò chơi sau đó được đưa vào thử nghiệm với một bản beta miễn phí thông qua hệ thống giftcode. Valve phát hành Dota 2 qua hệ thống điều phối Steam của họ mà qua đó trò chơi được cập nhật song song với hệ thống phiên bản DotA. "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:padding="10dp"
+                android:textStyle="bold|italic"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="   Thông thường, mỗi ván Dota 2 là một trận đấu riêng biệt và chia làm 2 đội, mỗi đội gồm 5 người chơi và chiếm đóng một thành lũy ở 2 góc đối diện của bản đồ. Nằm giữa pháo đài mỗi bên là một công trình gọi là Ancient ; để giành chiến thắng, một đội phải phá hủy thánh tích của đội đối phương. Mỗi người chơi chỉ được điều khiển một nhân vật duy nhất sở hữu một số khả năng chiến đấu nhất định, phối hợp cùng đồng đội giành lợi thế trên bản đồ để đi tới chiến thắng."
+                android:padding="10dp"
+                android:textStyle="bold|italic"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="   Công việc phát triển Dota 2 được bắt đầu vào năm 2009, với việc Valve tuyển được nhà phát triển IceFrog của bản mod DotA làm nhà thiết kế chính của tựa trò chơi tiếp nối này. Dota 2 được khen ngợi bởi các nhà phê bình trò chơi điện tử do vừa giữ được nét đặc sắc của trò tiền nhiệm là DotA, vừa nâng cao được chất lượng trò chơi, cũng như những cảm nhận lôi cuốn, hứng thú mà trò chơi mang lại. Tuy nhiên Dota 2 cũng bị phê phán bởi việc nó có đường cong học hỏi dốc và cộng đồng người chơi thiếu thân thiện. Kể từ khi ra mắt, Dota 2 luôn là trò được chơi nhiều nhất trên Steam[8], với lượng người chơi cùng lúc ở đỉnh điểm là 1.262.612[9]."
+                android:padding="10dp"
+                android:textStyle="bold|italic"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <com.example.bboyb.demogd2.CustomButton
+                        android:id="@+id/mainPageNews"
+                        android:text="News"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_news"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_background"
+                        />
+
+                <com.example.bboyb.demogd2.CustomButton
+                        android:id="@+id/mainPageItems"
+                        android:text="Items"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_item"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_background"
+                        />
+
+                <com.example.bboyb.demogd2.CustomButton
+                    android:id="@+id/mainPageHeroes"
+                    android:text="Heroes"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_hero"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_background"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

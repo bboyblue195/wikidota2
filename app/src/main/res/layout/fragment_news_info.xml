@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.bboyb.demogd2.NewsInfo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <!-- TODO: Update blank fragment layout -->
+         <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+             <TextView
+                 android:text="Tên News"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/tvNameNewsInfo"
+                 android:gravity="center"
+                 android:textSize="24sp"
+                 android:textStyle="bold"
+                 android:textColor="?android:attr/colorPressedHighlight" />
+
+             <ImageView
+                app:srcCompat="@drawable/ic_menu_camera"
+                android:id="@+id/ivNewsInfo"
+                android:layout_weight="0.24"
+                android:scaleType="fitXY"
+                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent" />
+
+             <TextView
+                android:text="Nội dung"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/tvContentNews"
+                android:layout_weight="0.72"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <TextView
+                android:text="ngày tháng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDateNews"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:gravity="bottom|right"
+                android:layout_marginRight="20dp"
+                android:textColor="?attr/actionModeSplitBackground"
+                android:layout_gravity="bottom" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

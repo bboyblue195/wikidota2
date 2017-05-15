@@ -1,0 +1,237 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.bboyb.demogd2.HeroesInfo">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:text="Tên hero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNameHeroesInfo"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="?android:attr/colorPressedHighlight"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.18">
+
+            <ImageView
+                android:layout_width="108dp"
+                android:layout_height="103dp"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:id="@+id/ivHeroesInfo"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Description :"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="20dp" />
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvDescriptionHeroesInfo"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="inherit"
+                        android:elevation="1dp" />
+                </ScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Attribute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAttributeHero"
+            android:textStyle="normal|bold"
+            android:layout_weight="0.06"
+            android:gravity="fill"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/strength"
+                android:id="@+id/ivStr" />
+
+            <TextView
+                android:text="Strength :"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView14"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="0.11"
+                android:layout_width="70dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvStrengthHero"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textStyle="normal|italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/intelligent"
+                android:id="@+id/ivInt" />
+
+            <TextView
+                android:text="Intelligent :"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView16"
+                android:textStyle="normal|bold"
+                android:layout_gravity="center"
+                android:layout_weight="0.08"
+                android:layout_width="75dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvIntelligentHero"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textStyle="normal|italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/agility"
+                android:id="@+id/ivAgi" />
+
+            <TextView
+                android:text="Agility :"
+                android:layout_height="wrap_content"
+                android:textStyle="normal|bold"
+                android:layout_gravity="center"
+                android:layout_weight="0.21"
+                android:layout_width="50dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAgilityHero"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textStyle="normal|italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_weight="0.02">
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/speed"
+                android:id="@+id/ivSpd"
+                android:layout_weight="0.03"
+                android:layout_marginLeft="3dp" />
+
+            <TextView
+                android:text="Speed :"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:layout_weight="0.27"
+                android:textStyle="normal|bold"
+                android:layout_gravity="center"
+                android:layout_width="37dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSpeedHero"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textStyle="normal|italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <TextView
+                android:text="Want to check Hero's Skill?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:gravity="right"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/skillnext"
+                android:id="@+id/ibSkills"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:layout_gravity="right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
