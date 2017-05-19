@@ -1,79 +1,78 @@
 package com.example.bboyb.demogd2.bean;
 
 
-import java.text.DateFormat;
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
- * Created by bboyb on 21/04/2017.
+ * Created by bboyb on 19/05/2017.
  */
 
 public class News {
-    private String idNews;
-    private String tieuDe;
-    private String noiDung;
-    private String moTa;
-    private Date thoiGian;
-    private byte[] hinhAnh;
+    private int id;
+    private String TieuDe;
+    private String NoiDung;
+    private String MoTa;
+    private String HinhAnh;
+    private Timestamp ThoiGian;
+
     public News() {
     }
 
-    public News(String idNews, String tieuDe, String noiDung, String moTa, Date thoiGian, byte[] hinhAnh) {
-        this.idNews = idNews;
-        this.tieuDe = tieuDe;
-        this.noiDung = noiDung;
-        this.moTa = moTa;
-        this.thoiGian = thoiGian;
-        this.hinhAnh = hinhAnh;
+    public News(int id, String tieuDe, String noiDung, String moTa, String hinhAnh, Timestamp thoiGian) {
+        this.id = id;
+        TieuDe = tieuDe;
+        NoiDung = noiDung;
+        MoTa = moTa;
+        HinhAnh = hinhAnh;
+        ThoiGian = thoiGian;
     }
 
-    public byte[] getHinhAnh() {
-        return hinhAnh;
+    public int getId() {
+        return id;
     }
 
-    public void setHinhAnh(byte[] hinhAnh) {
-        this.hinhAnh = hinhAnh;
-    }
-
-    public String getIdNews() {
-        return idNews;
-    }
-
-    public void setIdNews(String idNews) {
-        this.idNews = idNews;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTieuDe() {
-        return tieuDe;
+        return TieuDe;
     }
 
     public void setTieuDe(String tieuDe) {
-        this.tieuDe = tieuDe;
+        TieuDe = tieuDe;
     }
 
     public String getNoiDung() {
-        return noiDung;
+        return NoiDung;
     }
 
     public void setNoiDung(String noiDung) {
-        this.noiDung = noiDung;
+        NoiDung = noiDung;
     }
 
     public String getMoTa() {
-        return moTa;
+        return MoTa;
     }
 
     public void setMoTa(String moTa) {
-        this.moTa = moTa;
+        MoTa = moTa;
     }
 
-    public Date getThoiGian() {
-        return thoiGian;
+    public String getHinhAnh() {
+        return HinhAnh;
     }
 
-    public void setThoiGian(Date thoiGian) {
-        this.thoiGian = thoiGian;
+    public void setHinhAnh(String hinhAnh) {
+        HinhAnh = hinhAnh;
+    }
+
+    public Timestamp getThoiGian() {
+        return ThoiGian;
+    }
+
+    public void setThoiGian(Timestamp thoiGian) {
+        ThoiGian = thoiGian;
     }
 }
-
 

@@ -65,32 +65,7 @@ public class SQLiteDB extends SQLiteDataController {
         return listItems;
     }
 
-    public ArrayList<News> getListNews() {
-        ArrayList<News> listNews = new ArrayList<>();
-        // mo ket noi
-        try {
-            openDataBase();
-            Cursor cs = database.rawQuery("select * from news", null);
-            News news;
-            while (cs.moveToNext()) {
-                SimpleDateFormat sdf= new SimpleDateFormat("dd/MM/yyyy");
-                Date date=null;
-                try {
-                    date= sdf.parse(cs.getString(5));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                news = new News(cs.getString(0), cs.getString(1), cs.getString(2), cs.getString(3),date,cs.getBlob(4));
-                listNews.add(news);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            close();
-        }
 
-        return listNews;
-    }
 
     public ArrayList<Skills> getSkills(String idHero) {
         ArrayList<Skills> listSkills = new ArrayList<>();

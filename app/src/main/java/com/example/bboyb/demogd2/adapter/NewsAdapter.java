@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,13 +65,19 @@ public class NewsAdapter extends BaseAdapter {
         tvDescriptionNews=(TextView)convertView.findViewById(R.id.tvDescriptionNews);
         tvNameNews.setText(item.getTieuDe());
         tvDescriptionNews.setText(item.getMoTa());
-        ibNews.setImageBitmap(BitmapFactory.decodeByteArray(item.getHinhAnh(),0,item.getHinhAnh().length));
+        String image = item.getHinhAnh();
+        byte[] img = null;
+        if(!(image.trim()).equals("")){
+            img = Base64.decode(image, Base64.DEFAULT);
+        }
+        ibNews.setImageBitmap(BitmapFactory.decodeByteArray(img,0,img.length));
         SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
         final Bundle bundle=new Bundle();
         bundle.putString("Tittle",item.getTieuDe());
         bundle.putString("Content",item.getNoiDung());
         bundle.putString("Date",sdf.format(item.getThoiGian()));
-        bundle.putByteArray("Image",item.getHinhAnh());
+
+        bundle.putByteArray("Image",img);
         tvNameNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
