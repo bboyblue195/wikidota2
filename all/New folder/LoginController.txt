@@ -1,0 +1,38 @@
+@Controller
+public class LoginController {
+
+    @Autowired
+    private LoginService loginService;
+
+    @RequestMapping("login.html")
+    public String toLogin(Model model) {
+        Login login = new Login(); 
+        model.addAttribute("login",login);
+        return "login";
+    }
+
+    @RequestMapping(value ="login.html", method = RequestMethod.POST)
+    public ModelAndView  doLogin(@Valid @ModelAttribute ("login") Login login, 
+            BindingResult bindingresult,HttpSession session ) {
+         ModelAndView view = new ModelAndView("login");
+        if(!bindingresult.hasErrors()){
+            if(!loginService.authenticateUser(login)){
+                bindingresult.addError(new ObjectError("invalid", "Invalid Credentials!!!"));
+                return new ModelAndView("error");
+            }
+            else{
+                session.setAttribute("login", login);
+                view.setViewName("success");
+            }
+        }
+
+         return view;
+}
+
+    @RequestMapping("/logout")
+      public String logout(HttpSession session ) {
+         session.invalidate();
+         return "redirect:/login.html";
+      }
+
+}
